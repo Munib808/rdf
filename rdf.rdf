@@ -1,0 +1,1897 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#"
+     xml:base="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ccf="http://purl.org/ccf/"
+     xmlns:ddd="http://purl.obolibrary.org/obo/gsso.owl#"
+     xmlns:hum="https://purl.humanatlas.io/vocab/ccf#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ppp="http://purl.uniprot.org/core/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tgt="http://purl.obolibrary.org/obo/fbcv.owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:agro="http://snomed.info/sct/9000000000002070081231#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:ncit="http://purl.obolibrary.org/obo/ncit.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:repro="https://w3id.org/reproduceme#"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21">
+        <dcterms:creator>Obaid Ur Rahman Zia</dcterms:creator>
+        <dcterms:description>An ontology modeling users, profiles, jobs, organizations, skills, education and job applications in a professional networking platform.</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:rightsHolder>University of Sargodha</dcterms:rightsHolder>
+        <dcterms:title>Professional Networking and Recruitment Ontology</dcterms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rightsHolder -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rightsHolder"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/hasCredential -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/hasCredential">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#credentialOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:comment>Relates a user to an educational credential they hold.</rdfs:comment>
+        <rdfs:label>hasCredential</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/knows -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/knows">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isKnownBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates one user to another user they know.</rdfs:comment>
+        <rdfs:label>knows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/mentions -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/mentions">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isMentionedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates an activity to a user mentioned in it.</rdfs:comment>
+        <rdfs:label>mentions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/skills -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/skills">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isSkillOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:comment>Relates a user to a skill they possess.</rdfs:comment>
+        <rdfs:label>skills</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/worksFor -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/worksFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#employsExperience"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:comment>Relates an experience to the organization where it was acquired.</rdfs:comment>
+        <rdfs:label>worksFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#applicationForJob -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#applicationForJob">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasJobApplication"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>Relates a job application to the job it targets.</rdfs:comment>
+        <rdfs:label>applicationForJob</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#appliesFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#appliesFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasApplicant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <rdfs:comment>Relates a user to a job application they have submitted.</rdfs:comment>
+        <rdfs:label>appliesFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#associatedWithUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#associatedWithUser">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates an activity to a user it was associated with.</rdfs:comment>
+        <rdfs:label>associatedWithUser</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#citedInApplication -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#citedInApplication">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#citesExperience"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <rdfs:comment>Relates an experience to a job application that cites it.</rdfs:comment>
+        <rdfs:label>citedInApplication</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#citesExperience -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#citesExperience">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:comment>Relates a job application to an experience cited in it.</rdfs:comment>
+        <rdfs:label>citesExperience</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#credentialOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#credentialOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates an educational credential to the user who holds it.</rdfs:comment>
+        <rdfs:label>credentialOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#employsExperience -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#employsExperience">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:comment>Relates an organization to an experience that was acquired there.</rdfs:comment>
+        <rdfs:label>employsExperience</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#experienceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#experienceOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasExperience"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates an experience to the user who holds it.</rdfs:comment>
+        <rdfs:label>experienceOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasAffiliatedUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasAffiliatedUser">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isAffiliatedWith"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates an organization to a user affiliated with it.</rdfs:comment>
+        <rdfs:label>hasAffiliatedUser</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasApplicant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasApplicant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates a job application to the user who submitted it.</rdfs:comment>
+        <rdfs:label>hasApplicant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasConnections -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasConnections">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isConnectionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Connection"/>
+        <rdfs:comment>Relates a user to their connections.</rdfs:comment>
+        <rdfs:label>hasConnections</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasExperience -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasExperience">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:comment>Relates a user to their experiences.</rdfs:comment>
+        <rdfs:label>hasExperience</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasJobApplication -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasJobApplication">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <rdfs:comment>Relates a job to a job application submitted for it.</rdfs:comment>
+        <rdfs:label>hasJobApplication</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hasProfile">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isProfileOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:comment>Relates a user to their profile.</rdfs:comment>
+        <rdfs:label>hasProfile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hiresFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hiresFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hiringOrganization"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>Relates an organization to a job it is hiring for.</rdfs:comment>
+        <rdfs:label>hiresFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hiringOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#hiringOrganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:comment>Relates a job to the organization that is hiring.</rdfs:comment>
+        <rdfs:label>hiringOrganization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isAffiliatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isAffiliatedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:comment>Relates a user to an organization they are affiliated with.</rdfs:comment>
+        <rdfs:label>isAffiliatedWith</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isConnectionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isConnectionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Connection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates a connection to the user it belongs to.</rdfs:comment>
+        <rdfs:label>isConnectionOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isKnownBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isKnownBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Inverse of knows: indicates that the subject is known by the object user.</rdfs:comment>
+        <rdfs:label>isKnownBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isMentionedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isMentionedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:comment>Relates a user to an activity in which they are mentioned.</rdfs:comment>
+        <rdfs:label>isMentionedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isProfileOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isProfileOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates a profile to the user who owns it.</rdfs:comment>
+        <rdfs:label>isProfileOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isRequiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isRequiredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#requiresSkill"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>Relates a skill to a job that requires it.</rdfs:comment>
+        <rdfs:label>isRequiredBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isSkillOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#isSkillOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>Relates a skill to a user who possesses it.</rdfs:comment>
+        <rdfs:label>isSkillOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#managedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#managedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#manages"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Recruiter"/>
+        <rdfs:comment>Relates a job to the recruiter who manages it.</rdfs:comment>
+        <rdfs:label>managedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#manages -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#manages">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Recruiter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>Relates a recruiter to a job they manage.</rdfs:comment>
+        <rdfs:label>manages</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#recruitedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#recruitedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#recruitsFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Recruiter"/>
+        <rdfs:comment>Relates a job to the recruiter responsible for filling it.</rdfs:comment>
+        <rdfs:label>recruitedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#recruitsFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#recruitsFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Recruiter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>Relates a recruiter to a job they recruit for.</rdfs:comment>
+        <rdfs:label>recruitsFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#requiresSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#requiresSkill">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:comment>Relates a job to a skill it requires.</rdfs:comment>
+        <rdfs:label>requiresSkill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:comment>Relates a user to an activity they were associated with.</rdfs:comment>
+        <rdfs:label>wasAssociatedWith</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBcv_0000667 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/FBcv_0000667">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The website URL of an organization.</rdfs:comment>
+        <rdfs:label>website</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GSSO_010890 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/GSSO_010890">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The annual salary value (used for jobs).</rdfs:comment>
+        <rdfs:label>annualSalary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ccf/age -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ccf/age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>The age of a user in years.</rdfs:comment>
+        <rdfs:label>age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/JobPosting -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/JobPosting">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Textual description of a job posting.</rdfs:comment>
+        <rdfs:label>jobDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Electronic mail address of a user.</rdfs:comment>
+        <rdfs:label>email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/endDate -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/endDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Ending date of an experience or education period.</rdfs:comment>
+        <rdfs:label>endDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/headline -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/headline">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A short headline shown on a user&apos;s profile.</rdfs:comment>
+        <rdfs:label>headline</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/jobTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/jobTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The title of a job.</rdfs:comment>
+        <rdfs:label>jobTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/role -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/role">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The role held during an experience.</rdfs:comment>
+        <rdfs:label>role</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/salaryCurrency -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/salaryCurrency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Currency in which a job salary is paid.</rdfs:comment>
+        <rdfs:label>salaryCurrency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/startDate -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/startDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Starting date of an experience or education period.</rdfs:comment>
+        <rdfs:label>startDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#CGPA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#CGPA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The cumulative GPA earned for an educational credential.</rdfs:comment>
+        <rdfs:label>CGPA</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The postal address of a user.</rdfs:comment>
+        <rdfs:label>address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#bio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#bio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A short biography shown on a user&apos;s profile.</rdfs:comment>
+        <rdfs:label>bio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#connectionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#connectionDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Connection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date when a connection between two users was established.</rdfs:comment>
+        <rdfs:label>connectionDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#connectionStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#connectionStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Connection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Status of a connection such as pending or accepted.</rdfs:comment>
+        <rdfs:label>connectionStatus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#contentText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#contentText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Post"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Textual content of a post.</rdfs:comment>
+        <rdfs:label>contentText</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#degreeTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#degreeTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The title of an academic degree.</rdfs:comment>
+        <rdfs:label>degreeTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#durationMonths -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#durationMonths">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Duration of an experience in months.</rdfs:comment>
+        <rdfs:label>durationMonths</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#grade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#grade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Letter grade earned for an educational credential.</rdfs:comment>
+        <rdfs:label>grade</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#institutionName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#institutionName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the institution that awarded an educational credential.</rdfs:comment>
+        <rdfs:label>institutionName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#jobType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#jobType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Type of job such as Full-Time, Contract or Internship.</rdfs:comment>
+        <rdfs:label>jobType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#lastUpdated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#lastUpdated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Timestamp when a profile was last updated.</rdfs:comment>
+        <rdfs:label>lastUpdated</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#numberOfComments -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#numberOfComments">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Post"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Number of comments on a post.</rdfs:comment>
+        <rdfs:label>numberOfComments</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#numberOfLikes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#numberOfLikes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Post"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Number of likes on a post.</rdfs:comment>
+        <rdfs:label>numberOfLikes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#organizationEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#organizationEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Contact email of an organization.</rdfs:comment>
+        <rdfs:label>organizationEmail</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#organizationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#organizationName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of an organization.</rdfs:comment>
+        <rdfs:label>organizationName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#phoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#phoneNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Phone number of a user.</rdfs:comment>
+        <rdfs:label>phoneNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#postingDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#postingDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date when a job was posted.</rdfs:comment>
+        <rdfs:label>postingDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#profileURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#profileURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>URL of a user&apos;s profile.</rdfs:comment>
+        <rdfs:label>profileURL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#requiredExperienceYears -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#requiredExperienceYears">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Number of years of experience required for a job.</rdfs:comment>
+        <rdfs:label>requiredExperienceYears</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#salary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#salary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Salary amount offered for a job.</rdfs:comment>
+        <rdfs:label>salary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#schemaName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#schemaName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Full name of a user.</rdfs:comment>
+        <rdfs:label>schemaName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#skillLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#skillLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Proficiency level for a skill, from 1 to 5.</rdfs:comment>
+        <rdfs:label>skillLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#skillName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#skillName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of a skill.</rdfs:comment>
+        <rdfs:label>skillName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/gender -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Gender of a user.</rdfs:comment>
+        <rdfs:label>gender</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C54627 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C54627">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:comment>External NCIT reference for the Experience concept.</rdfs:comment>
+        <rdfs:label>ExperienceNcit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C75561 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C75561">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Student"/>
+        <rdfs:comment>External NCIT reference for the Student concept.</rdfs:comment>
+        <rdfs:label>StudentNcit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C84385 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C84385">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:comment>External NCIT reference for the Profile concept.</rdfs:comment>
+        <rdfs:label>ProfileNcit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/EducationalOccupationalCredential -->
+
+    <owl:Class rdf:about="http://schema.org/EducationalOccupationalCredential">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:comment>Schema.org class equivalent to Education in this ontology.</rdfs:comment>
+        <rdfs:label>EducationalOccupationalCredential</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+    <owl:Class rdf:about="http://schema.org/Organization">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:comment>Schema.org class equivalent to Organization in this ontology.</rdfs:comment>
+        <rdfs:label>SchemaOrganization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity">
+        <rdfs:comment>An action performed by a user on the platform such as a post, comment, repost or reaction.</rdfs:comment>
+        <rdfs:label>Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Certification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Certification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:comment>A formal recognition awarded after completing a course or examination.</rdfs:comment>
+        <rdfs:label>Certification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Comment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Comment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:comment>A textual response made by a user on a post.</rdfs:comment>
+        <rdfs:label>Comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Connection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Connection">
+        <rdfs:comment>A link representing a relationship between two users on the platform.</rdfs:comment>
+        <rdfs:label>Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ContractJob -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ContractJob">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>A job offered on a contractual basis for a fixed time period.</rdfs:comment>
+        <rdfs:label>ContractJob</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:comment>A formal academic qualification awarded by a university.</rdfs:comment>
+        <rdfs:label>Degree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Diploma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Diploma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education"/>
+        <rdfs:comment>An educational qualification awarded for completion of a course shorter than a degree.</rdfs:comment>
+        <rdfs:label>Diploma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Education">
+        <rdfs:comment>An academic credential or qualification held by a user.</rdfs:comment>
+        <rdfs:label>Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience">
+        <rdfs:comment>Work or internship experience associated with a user.</rdfs:comment>
+        <rdfs:label>Experience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GraduateStudent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GraduateStudent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Student"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/hasCredential"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnderGraduateStudent"/>
+        <rdfs:comment>A student currently pursuing a graduate-level program.</rdfs:comment>
+        <rdfs:label>GraduateStudent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Internship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Internship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>A short-term job typically taken by students for practical experience.</rdfs:comment>
+        <rdfs:label>Internship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#InternshipExperience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#InternshipExperience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:comment>Experience obtained by working as an intern.</rdfs:comment>
+        <rdfs:label>InternshipExperience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#requiresSkill"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A job posting offered by an organization on the platform.</rdfs:comment>
+        <rdfs:label>Job</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication">
+        <rdfs:comment>A formal application submitted by a user for a job.</rdfs:comment>
+        <rdfs:label>JobApplication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#OnSiteJob -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#OnSiteJob">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#RemoteJob"/>
+        <rdfs:comment>A job requiring physical presence at the workplace.</rdfs:comment>
+        <rdfs:label>OnSiteJob</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>A company, institution or entity that hires users or is affiliated with users.</rdfs:comment>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PaidInternship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PaidInternship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Internship"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnPaidInternship"/>
+        <rdfs:comment>An internship in which the intern receives monetary compensation.</rdfs:comment>
+        <rdfs:label>PaidInternship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Post -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Post">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:comment>A piece of content published by a user on the platform.</rdfs:comment>
+        <rdfs:label>Post</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PrivateOrganization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PrivateOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PublicOrganization"/>
+        <rdfs:comment>A privately owned organization.</rdfs:comment>
+        <rdfs:label>PrivateOrganization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Professional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Professional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>A user who is employed and active in their professional career.</rdfs:comment>
+        <rdfs:label>Professional</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ProfessionalProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ProfessionalProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:comment>A profile that emphasizes professional information and work history.</rdfs:comment>
+        <rdfs:label>ProfessionalProfile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile">
+        <rdfs:comment>A user&apos;s public-facing profile on the platform.</rdfs:comment>
+        <rdfs:label>Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PublicOrganization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PublicOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Organization"/>
+        <rdfs:comment>A publicly owned or government organization.</rdfs:comment>
+        <rdfs:label>PublicOrganization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PublicProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PublicProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Profile"/>
+        <rdfs:comment>A profile that is visible to all users on the platform.</rdfs:comment>
+        <rdfs:label>PublicProfile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Reaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Reaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:comment>An emotional response left by a user on a post or comment.</rdfs:comment>
+        <rdfs:label>Reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Recruiter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Recruiter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>A user whose role is to identify and hire candidates for jobs.</rdfs:comment>
+        <rdfs:label>Recruiter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#RemoteJob -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#RemoteJob">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Job"/>
+        <rdfs:comment>A job that can be performed remotely without physical presence.</rdfs:comment>
+        <rdfs:label>RemoteJob</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Repost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Repost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Activity"/>
+        <rdfs:comment>An activity in which a user shares another user&apos;s post.</rdfs:comment>
+        <rdfs:label>Repost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill">
+        <rdfs:comment>A capability possessed by a user or required by a job.</rdfs:comment>
+        <rdfs:label>Skill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SoftSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SoftSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:comment>A non-technical interpersonal capability such as communication or leadership.</rdfs:comment>
+        <rdfs:label>SoftSkill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User"/>
+        <rdfs:comment>A user currently enrolled in an academic program.</rdfs:comment>
+        <rdfs:label>Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Skill"/>
+        <rdfs:comment>A technical capability such as a programming language or framework.</rdfs:comment>
+        <rdfs:label>TechnicalSkill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnPaidInternship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnPaidInternship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Internship"/>
+        <rdfs:comment>An internship in which the intern does not receive monetary compensation.</rdfs:comment>
+        <rdfs:label>UnPaidInternship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnderGraduateStudent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnderGraduateStudent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Student"/>
+        <rdfs:comment>A student currently pursuing an undergraduate-level program.</rdfs:comment>
+        <rdfs:label>UnderGraduateStudent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#User">
+        <rdfs:comment>A registered person or entity on the platform.</rdfs:comment>
+        <rdfs:label>User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WorkExperience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WorkExperience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Experience"/>
+        <rdfs:comment>Experience obtained through regular employment.</rdfs:comment>
+        <rdfs:label>WorkExperience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ali">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GraduateStudent"/>
+        <schema:hasCredential rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliDegree"/>
+        <schema:knows rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Bilal"/>
+        <schema:knows rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Sara"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SQLSkill"/>
+        <appliesFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliApplication"/>
+        <hasExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliExperience"/>
+        <hasProfile rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliProfile"/>
+        <isAffiliatedWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NUST"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</ccf:age>
+        <schema:email>ali.hassan@example.com</schema:email>
+        <address>Sargodha, Pakistan</address>
+        <schemaName>Ali Hassan</schemaName>
+        <foaf:gender>Male</foaf:gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliApplication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliApplication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <applicationForJob rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DataScientistJob"/>
+        <citesExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliExperience"/>
+        <hasApplicant rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ali"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliDegree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree"/>
+        <CGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.8</CGPA>
+        <degreeTitle>BSc Software Engineering</degreeTitle>
+        <grade>A</grade>
+        <institutionName>University of Sargodha</institutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliExperience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WorkExperience"/>
+        <schema:worksFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GoogleInc"/>
+        <experienceOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ali"/>
+        <schema:role>Software Engineering Intern</schema:role>
+        <durationMonths rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</durationMonths>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliProfile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AliProfile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ProfessionalProfile"/>
+        <schema:headline>Software Engineer | AI Enthusiast</schema:headline>
+        <bio>Software engineer passionate about AI and full-stack development</bio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AmazonInc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AmazonInc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PrivateOrganization"/>
+        <organizationEmail>jobs@amazon.com</organizationEmail>
+        <organizationName>Amazon Inc</organizationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ayesha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ayesha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Professional"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaScriptSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ReactSkill"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">26</ccf:age>
+        <schema:email>ayesha.tariq@example.com</schema:email>
+        <address>Multan, Pakistan</address>
+        <schemaName>Ayesha Tariq</schemaName>
+        <foaf:gender>Female</foaf:gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Bilal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Bilal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnderGraduateStudent"/>
+        <schema:hasCredential rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalDegree"/>
+        <schema:knows rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Usman"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#CommunicationSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill"/>
+        <appliesFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalApplication"/>
+        <hasExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalExperience"/>
+        <isAffiliatedWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NUST"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</ccf:age>
+        <schema:email>bilal.ahmed@example.com</schema:email>
+        <address>Islamabad, Pakistan</address>
+        <schemaName>Bilal Ahmed</schemaName>
+        <foaf:gender>Male</foaf:gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalApplication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalApplication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <applicationForJob rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#InternJob"/>
+        <hasApplicant rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Bilal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalDegree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree"/>
+        <CGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.2</CGPA>
+        <degreeTitle>BSc Information Technology</degreeTitle>
+        <grade>B</grade>
+        <institutionName>FAST University</institutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#BilalExperience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#InternshipExperience"/>
+        <schema:worksFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PlivixTech"/>
+        <experienceOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Bilal"/>
+        <schema:role>Junior Developer</schema:role>
+        <durationMonths rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</durationMonths>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#CommunicationSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#CommunicationSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SoftSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</skillLevel>
+        <skillName>Communication</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DataScientistJob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DataScientistJob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#RemoteJob"/>
+        <hiringOrganization rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GoogleInc"/>
+        <recruitedBy rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Hamza"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLSkill"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SQLSkill"/>
+        <schema:jobTitle>Data Scientist</schema:jobTitle>
+        <jobType>Full-Time</jobType>
+        <requiredExperienceYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</requiredExperienceYears>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80000.0</salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DevOpsJob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DevOpsJob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#RemoteJob"/>
+        <hiringOrganization rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AmazonInc"/>
+        <recruitedBy rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Hamza"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DockerSkill"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill"/>
+        <schema:jobTitle>DevOps Engineer</schema:jobTitle>
+        <jobType>Full-Time</jobType>
+        <requiredExperienceYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</requiredExperienceYears>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75000.0</salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DockerSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DockerSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skillLevel>
+        <skillName>Docker</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Fatima -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Fatima">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Professional"/>
+        <schema:hasCredential rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaDegree"/>
+        <schema:knows rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ayesha"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#CommunicationSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SQLSkill"/>
+        <appliesFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaApplication"/>
+        <hasExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaExperience"/>
+        <hasProfile rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaProfile"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</ccf:age>
+        <schema:email>fatima.malik@example.com</schema:email>
+        <address>Karachi, Pakistan</address>
+        <schemaName>Fatima Malik</schemaName>
+        <foaf:gender>Female</foaf:gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaApplication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaApplication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <applicationForJob rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLEngineerJob"/>
+        <citesExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaExperience"/>
+        <hasApplicant rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Fatima"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaDegree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree"/>
+        <CGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.6</CGPA>
+        <degreeTitle>MSc Data Science</degreeTitle>
+        <grade>A</grade>
+        <institutionName>LUMS</institutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaExperience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WorkExperience"/>
+        <schema:worksFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GoogleInc"/>
+        <experienceOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Fatima"/>
+        <schema:role>Senior Data Analyst</schema:role>
+        <durationMonths rdf:datatype="http://www.w3.org/2001/XMLSchema#float">36.0</durationMonths>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaProfile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#FatimaProfile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ProfessionalProfile"/>
+        <schema:headline>Senior Data Analyst at Google</schema:headline>
+        <bio>Senior data analyst with expertise in machine learning</bio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GoogleInc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GoogleInc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PrivateOrganization"/>
+        <organizationEmail>hr@google.com</organizationEmail>
+        <organizationName>Google Inc</organizationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Hamza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Hamza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Recruiter"/>
+        <schema:knows rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Ali"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</ccf:age>
+        <schema:email>hamza.sheikh@example.com</schema:email>
+        <address>Lahore, Pakistan</address>
+        <schemaName>Hamza Sheikh</schemaName>
+        <foaf:gender>Male</foaf:gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#InternJob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#InternJob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PaidInternship"/>
+        <hiringOrganization rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PlivixTech"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill"/>
+        <schema:jobTitle>Software Intern</schema:jobTitle>
+        <jobType>Internship</jobType>
+        <requiredExperienceYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</requiredExperienceYears>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25000.0</salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaScriptSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaScriptSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</skillLevel>
+        <skillName>JavaScript</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</skillLevel>
+        <skillName>Java</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLEngineerJob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLEngineerJob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#RemoteJob"/>
+        <hiringOrganization rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GoogleInc"/>
+        <recruitedBy rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Hamza"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLSkill"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill"/>
+        <schema:jobTitle>Machine Learning Engineer</schema:jobTitle>
+        <jobType>Contract</jobType>
+        <requiredExperienceYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</requiredExperienceYears>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">95000.0</salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MLSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</skillLevel>
+        <skillName>Machine Learning</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MicrosoftInc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MicrosoftInc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PrivateOrganization"/>
+        <organizationEmail>careers@microsoft.com</organizationEmail>
+        <organizationName>Microsoft Inc</organizationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NUST -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NUST">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PublicOrganization"/>
+        <organizationEmail>admin@nust.edu.pk</organizationEmail>
+        <organizationName>NUST University</organizationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NetflixInc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NetflixInc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PrivateOrganization"/>
+        <organizationEmail>careers@netflix.com</organizationEmail>
+        <organizationName>Netflix Inc</organizationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PlivixTech -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PlivixTech">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PrivateOrganization"/>
+        <organizationEmail>info@plivix-tech.com</organizationEmail>
+        <organizationName>Plivix Technologies</organizationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</skillLevel>
+        <skillName>Python</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ReactSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ReactSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</skillLevel>
+        <skillName>React</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SQLSkill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SQLSkill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#TechnicalSkill"/>
+        <skillLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skillLevel>
+        <skillName>SQL</skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Sara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Sara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GraduateStudent"/>
+        <schema:hasCredential rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraDegree"/>
+        <schema:knows rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Fatima"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaScriptSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ReactSkill"/>
+        <appliesFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraApplication"/>
+        <hasExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraExperience"/>
+        <hasProfile rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraProfile"/>
+        <isAffiliatedWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NUST"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</ccf:age>
+        <schema:email>sara.khan@example.com</schema:email>
+        <address>Lahore, Pakistan</address>
+        <schemaName>Sara Khan</schemaName>
+        <foaf:gender>Female</foaf:gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraApplication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraApplication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JobApplication"/>
+        <applicationForJob rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WebDeveloperJob"/>
+        <citesExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraExperience"/>
+        <hasApplicant rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Sara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraDegree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree"/>
+        <CGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.9</CGPA>
+        <degreeTitle>BSc Computer Science</degreeTitle>
+        <grade>A+</grade>
+        <institutionName>NUST</institutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraExperience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WorkExperience"/>
+        <schema:worksFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MicrosoftInc"/>
+        <experienceOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Sara"/>
+        <schema:role>Frontend Developer</schema:role>
+        <durationMonths rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</durationMonths>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraProfile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SaraProfile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PublicProfile"/>
+        <schema:headline>Frontend Developer at Microsoft</schema:headline>
+        <bio>Frontend developer specializing in React and modern web technologies</bio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SoftwareEngineerJob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SoftwareEngineerJob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#OnSiteJob"/>
+        <hiringOrganization rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PlivixTech"/>
+        <recruitedBy rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Hamza"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaSkill"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#SQLSkill"/>
+        <schema:jobTitle>Software Engineer</schema:jobTitle>
+        <jobType>Full-Time</jobType>
+        <requiredExperienceYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</requiredExperienceYears>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65000.0</salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Usman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Usman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#GraduateStudent"/>
+        <schema:hasCredential rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UsmanDegree"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#DockerSkill"/>
+        <schema:skills rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#PythonSkill"/>
+        <hasExperience rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UsmanExperience"/>
+        <isAffiliatedWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NUST"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</ccf:age>
+        <schema:email>usman.raza@example.com</schema:email>
+        <address>Faisalabad, Pakistan</address>
+        <schemaName>Usman Raza</schemaName>
+        <foaf:gender>Male</foaf:gender>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UsmanDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UsmanDegree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Degree"/>
+        <CGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.4</CGPA>
+        <degreeTitle>BSc Artificial Intelligence</degreeTitle>
+        <grade>B+</grade>
+        <institutionName>COMSATS</institutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UsmanExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UsmanExperience">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WorkExperience"/>
+        <schema:worksFor rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#AmazonInc"/>
+        <experienceOf rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Usman"/>
+        <schema:role>DevOps Intern</schema:role>
+        <durationMonths rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</durationMonths>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WebDeveloperJob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#WebDeveloperJob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#OnSiteJob"/>
+        <hiringOrganization rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#MicrosoftInc"/>
+        <recruitedBy rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Hamza"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#JavaScriptSkill"/>
+        <requiresSkill rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#ReactSkill"/>
+        <schema:jobTitle>Web Developer</schema:jobTitle>
+        <jobType>Full-Time</jobType>
+        <requiredExperienceYears rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</requiredExperienceYears>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55000.0</salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Zainab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#Zainab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#UnderGraduateStudent"/>
+        <isAffiliatedWith rdf:resource="http://www.semanticweb.org/munib/ontologies/2026/3/untitled-ontology-21#NUST"/>
+        <ccf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</ccf:age>
+        <schema:email>zainab.iqbal@example.com</schema:email>
+        <address>Peshawar, Pakistan</address>
+        <schemaName>Zainab Iqbal</schemaName>
+        <foaf:gender>Female</foaf:gender>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
